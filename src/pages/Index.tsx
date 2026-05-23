@@ -458,10 +458,24 @@ export default function Index() {
             ))}
           </div>
 
+          {/* Squad Banner */}
+          <div
+            onClick={() => navigate("/squad")}
+            className="mt-8 max-w-5xl mx-auto rounded-2xl p-7 flex flex-col md:flex-row items-center gap-6 cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+            style={{ background: "linear-gradient(135deg, #0a1a0a 0%, #0f2d0f 60%, #7CFC0015 100%)", border: "2px solid #7CFC00" }}
+          >
+            <div className="text-5xl">👑</div>
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-black uppercase mb-1" style={{ fontFamily: "Oswald, sans-serif", color: "#7CFC00" }}>Текущий состав</h3>
+              <p className="text-gray-300 text-sm">Мбаппе · Беллингем · Виниус · Модрич · Кроос · Куртуа</p>
+            </div>
+            <div className="md:ml-auto text-sm font-semibold" style={{ color: "#7CFC00" }}>Смотреть →</div>
+          </div>
+
           {/* Victories Banner */}
           <div
             onClick={() => navigate("/victories")}
-            className="mt-8 max-w-5xl mx-auto rounded-2xl p-7 flex flex-col md:flex-row items-center gap-6 cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+            className="mt-4 max-w-5xl mx-auto rounded-2xl p-7 flex flex-col md:flex-row items-center gap-6 cursor-pointer hover:scale-[1.02] transition-transform duration-300"
             style={{ background: "linear-gradient(135deg, #1a1000 0%, #2d1e00 60%, #FFD70015 100%)", border: "2px solid #FFD700" }}
           >
             <div className="text-5xl">🏆</div>
