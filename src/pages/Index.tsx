@@ -3,10 +3,12 @@ import { ChevronDown, Instagram, Trophy, Calendar, Users, Star, BotIcon as Robot
 import { ContactForm } from "@/components/ContactForm"
 import { ChatbotModal } from "@/components/ChatbotModal"
 import { useState, useEffect, useRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 export default function Index() {
+  const navigate = useNavigate()
   const [isHeadingVisible, setIsHeadingVisible] = useState(false)
   const [isAboutVisible, setIsAboutVisible] = useState(false)
   const [isServicesVisible, setIsServicesVisible] = useState(false)
@@ -395,6 +397,29 @@ export default function Index() {
                   Совместные просмотры матчей, фан-встречи и мероприятия. 
                   Почувствуй атмосферу Бернабеу вместе с нами!
                 </p>
+              </div>
+            </div>
+
+            {/* CR7 Banner */}
+            <div
+              className="mt-10 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-6 cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+              style={{ background: "linear-gradient(135deg, #00205B 0%, #003087 60%, #FFD70020 100%)", border: "2px solid #FFD700" }}
+              onClick={() => navigate("/ronaldo")}
+            >
+              <div
+                className="flex-shrink-0 w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black border-4"
+                style={{ borderColor: "#FFD700", background: "#00205B", color: "#FFD700", fontFamily: "Oswald, sans-serif" }}
+              >
+                CR7
+              </div>
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl font-black uppercase mb-1" style={{ fontFamily: "Oswald, sans-serif", color: "#FFD700" }}>
+                  Криштиану Роналду
+                </h3>
+                <p className="text-gray-300 text-sm">450 голов · 16 трофеев · Легенда Реал Мадрида · 2009–2018</p>
+              </div>
+              <div className="md:ml-auto flex items-center gap-2 text-sm font-semibold" style={{ color: "#FFD700" }}>
+                Все трофеи →
               </div>
             </div>
           </div>
