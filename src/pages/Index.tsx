@@ -1,5 +1,5 @@
 import { StarField } from "@/components/StarField"
-import { ChevronDown, Linkedin, Users, LineChart, Clock, Lightbulb, BotIcon as Robot } from "lucide-react"
+import { ChevronDown, Instagram, Trophy, Calendar, Users, Star, BotIcon as Robot } from "lucide-react"
 import { ContactForm } from "@/components/ContactForm"
 import { ChatbotModal } from "@/components/ChatbotModal"
 import { useState, useEffect, useRef } from "react"
@@ -210,13 +210,13 @@ export default function Index() {
         {/* Navigation links in top right corner */}
         <div className="absolute top-6 right-6 z-10 flex space-x-3">
           <a
-            href="https://linkedin.com/company/example"
+            href="https://instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Профиль в LinkedIn"
+            aria-label="Наш Instagram"
             className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white bg-transparent text-white transition-colors hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
           >
-            <Linkedin className="h-5 w-5" />
+            <Instagram className="h-5 w-5" />
           </a>
 
           <Button
@@ -241,13 +241,13 @@ export default function Index() {
               }}
             >
               <h1 className="text-4xl font-bold text-white md:text-6xl font-heading">
-                Nebula Ventures{" "}
-                <span role="img" aria-label="rocket">
-                  🚀
+                Hala Madrid{" "}
+                <span role="img" aria-label="football">
+                  ⚽
                 </span>
               </h1>
               <p className="mt-4 text-lg text-gray-300 md:text-xl px-4 max-w-xs mx-auto md:max-w-none">
-                Экспертиза в области ИИ и технологий
+                Сообщество настоящих фанатов Реал Мадрида
               </p>
               <Button
                 onClick={scrollToAbout}
@@ -287,27 +287,24 @@ export default function Index() {
             )}
           >
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gray-700 flex-shrink-0">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon-d4g0PyeQftYkhSxiNDNMwiGNNteM3o.svg"
-                  alt="Профиль"
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 flex-shrink-0 flex items-center justify-center text-8xl"
+                style={{ borderColor: "#FFD700", background: "linear-gradient(135deg, #003087 0%, #00205B 100%)" }}>
+                ⚽
               </div>
               <div className="space-y-4 text-center md:text-left px-4 md:px-0">
                 <h2 className="text-3xl font-bold font-heading">О нас</h2>
                 <div className="space-y-4 max-w-2xl">
                   <p className="text-gray-300">
-                    Мы помогаем компаниям использовать передовые технологии, чтобы радовать клиентов
-                    и оптимизировать бизнес-процессы.
+                    Мы — фанаты Реал Мадрида, объединённые любовью к величайшему клубу мира. 
+                    Здесь живёт настоящая страсть к игре, Бернабеу и бело-золотым цветам.
                   </p>
                   <p className="text-gray-300">
-                    Стратегическое планирование, техническое лидерство или практическая поддержка разработки —
-                    мы поможем создать правильные решения для вашего бизнеса.
+                    Следим за каждым матчем, обсуждаем составы, делимся новостями и живём 
+                    каждым голом. Реал — это не просто клуб, это образ жизни.
                   </p>
                   <p className="text-gray-300">
-                    Наша команда имеет более 10 лет опыта создания сложных технических продуктов
-                    для стартапов и крупных компаний. Свяжитесь с нами или попробуйте ИИ-ассистента.
+                    Присоединяйся к нашему сообществу болельщиков — вместе мы громче, 
+                    вместе мы сильнее. Hala Madrid y nada más!
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 pt-4 justify-center md:justify-start">
@@ -316,18 +313,18 @@ export default function Index() {
                       onClick={scrollToContact}
                       variant="outline"
                       size="sm"
-                      className="bg-transparent text-white border-white hover:bg-white hover:text-black transition-colors w-[140px] mx-auto sm:mx-0"
+                      className="bg-transparent text-white border-white hover:bg-white hover:text-black transition-colors w-[160px] mx-auto sm:mx-0"
                     >
-                      Связаться
+                      Вступить в клуб
                     </Button>
                     <Button
                       onClick={openChatbot}
                       variant="outline"
                       size="sm"
-                      className="bg-transparent text-white border-white hover:bg-white hover:text-black transition-colors w-[140px] mx-auto sm:mx-0 flex items-center justify-center"
+                      className="bg-transparent text-white border-white hover:bg-white hover:text-black transition-colors w-[160px] mx-auto sm:mx-0 flex items-center justify-center"
                     >
                       <Robot className="mr-1 h-4 w-4" />
-                      ИИ-чат
+                      Фан-чат
                     </Button>
                   </div>
                 </div>
@@ -346,7 +343,7 @@ export default function Index() {
               isServicesTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
             )}
           >
-            Услуги
+            Жизнь фаната
           </h2>
           <div
             ref={servicesContentRef}
@@ -356,46 +353,47 @@ export default function Index() {
             )}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Fractional CPO */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <Users className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">CPO / CTO на аутсорсе</h3>
+                  <Trophy className="h-7 w-7 mr-4" style={{ color: "#FFD700" }} aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Матчи и результаты</h3>
                 </div>
                 <p className="text-gray-300">
-                  Продуктовое лидерство, выстраивание процессов, развитие команды, технологическая стратегия.
+                  Актуальные результаты, расписание игр и прямые трансляции. 
+                  Никогда не пропустишь важный матч Реала.
                 </p>
               </div>
 
-              {/* Product Consulting */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <LineChart className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Продуктовый консалтинг</h3>
+                  <Star className="h-7 w-7 mr-4" style={{ color: "#FFD700" }} aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Легенды клуба</h3>
                 </div>
                 <p className="text-gray-300">
-                  Разработка роадмапа, поиск и валидация product-market fit, оценка кандидатов.
+                  Истории великих игроков — от Ди Стефано до Роналду и Беллингема. 
+                  Всё о звёздах, которые создали историю Реала.
                 </p>
               </div>
 
-              {/* Interim Leadership */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <Clock className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Временное руководство</h3>
-                </div>
-                <p className="text-gray-300">Временный CPO или VP of Product для компаний в период трансформации.</p>
-              </div>
-
-              {/* Workshops & Advisory */}
-              <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
-                <div className="flex items-center mb-4">
-                  <Lightbulb className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Разработка продуктов</h3>
+                  <Users className="h-7 w-7 mr-4" style={{ color: "#FFD700" }} aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Фан-сообщество</h3>
                 </div>
                 <p className="text-gray-300">
-                  Быстрое прототипирование и запуск внутренних и внешних приложений и сайтов
-                  с использованием современных инструментов.
+                  Общайся с тысячами болельщиков, обсуждай тактику, 
+                  делись эмоциями после каждого матча.
+                </p>
+              </div>
+
+              <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
+                <div className="flex items-center mb-4">
+                  <Calendar className="h-7 w-7 mr-4" style={{ color: "#FFD700" }} aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">События и встречи</h3>
+                </div>
+                <p className="text-gray-300">
+                  Совместные просмотры матчей, фан-встречи и мероприятия. 
+                  Почувствуй атмосферу Бернабеу вместе с нами!
                 </p>
               </div>
             </div>
@@ -412,7 +410,7 @@ export default function Index() {
               isHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
             )}
           >
-            Давайте создавать
+            Вступить в сообщество
           </h2>
           <ContactForm />
         </div>

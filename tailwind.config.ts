@@ -20,9 +20,12 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['var(--font-montserrat)'],
-				heading: ['var(--font-inter)'],
+				heading: ['Oswald', 'var(--font-inter)', 'sans-serif'],
 			},
 			colors: {
+				'rm-gold': '#FFD700',
+				'rm-blue': '#003087',
+				'rm-dark': '#00205B',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
