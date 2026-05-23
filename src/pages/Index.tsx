@@ -426,6 +426,54 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Legends Section */}
+      <section className="py-20 bg-black text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-center text-3xl font-black uppercase mb-4" style={{ fontFamily: "Oswald, sans-serif", color: "#FFD700" }}>Легенды клуба</h2>
+          <p className="text-center text-gray-400 mb-10">Игроки, вошедшие в историю Реал Мадрида</p>
+          <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { badge: "ZZ", name: "Зинедин Зидан", sub: "155 матчей · Игрок + тренер", path: "/zidane" },
+              { badge: "7", name: "Рауль Гонсалес", sub: "741 матч · 323 гола · Капитан", path: "/raul" },
+              { badge: "RC3", name: "Роберто Карлос", sub: "527 матчей · Лучший левый защ.", path: "/roberto-carlos" },
+              { badge: "4", name: "Серхио Рамос", sub: "671 матч · 22 трофея · Капитан", path: "/ramos" },
+              { badge: "3", name: "Пепе", sub: "334 матча · 14 трофеев · Защитник", path: "/pepe" },
+              { badge: "CR7", name: "Криштиану Роналду", sub: "438 матчей · 450 голов · Бомбардир", path: "/ronaldo" },
+            ].map((legend) => (
+              <div
+                key={legend.path}
+                onClick={() => navigate(legend.path)}
+                className="flex items-center gap-4 rounded-xl p-5 border border-gray-800 hover:border-yellow-500 cursor-pointer transition-all duration-300 hover:scale-105"
+                style={{ background: "#111827" }}
+              >
+                <div className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center text-lg font-black border-2" style={{ borderColor: "#FFD700", background: "#00205B", color: "#FFD700", fontFamily: "Oswald, sans-serif" }}>
+                  {legend.badge}
+                </div>
+                <div>
+                  <div className="font-bold text-white">{legend.name}</div>
+                  <div className="text-xs text-gray-400 mt-0.5">{legend.sub}</div>
+                </div>
+                <div className="ml-auto text-gray-600 hover:text-yellow-400 transition-colors">→</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Victories Banner */}
+          <div
+            onClick={() => navigate("/victories")}
+            className="mt-8 max-w-5xl mx-auto rounded-2xl p-7 flex flex-col md:flex-row items-center gap-6 cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+            style={{ background: "linear-gradient(135deg, #1a1000 0%, #2d1e00 60%, #FFD70015 100%)", border: "2px solid #FFD700" }}
+          >
+            <div className="text-5xl">🏆</div>
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-black uppercase mb-1" style={{ fontFamily: "Oswald, sans-serif", color: "#FFD700" }}>Великие победы Реала</h3>
+              <p className="text-gray-300 text-sm">15 Лиг Чемпионов · 36 чемпионств · Клуб Века по версии ФИФА</p>
+            </div>
+            <div className="md:ml-auto text-sm font-semibold" style={{ color: "#FFD700" }}>Смотреть →</div>
+          </div>
+        </div>
+      </section>
+
       <section ref={contactSectionRef} id="contact" className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
           <h2
