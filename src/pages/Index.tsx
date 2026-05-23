@@ -458,6 +458,20 @@ export default function Index() {
             ))}
           </div>
 
+          {/* News & Schedule Banner */}
+          <div
+            onClick={() => navigate("/news")}
+            className="mt-8 max-w-5xl mx-auto rounded-2xl p-7 flex flex-col md:flex-row items-center gap-6 cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+            style={{ background: "linear-gradient(135deg, #0a0a1a 0%, #0f0f2d 60%, #00BFFF15 100%)", border: "2px solid #00BFFF" }}
+          >
+            <div className="flex gap-2 text-4xl">📅📰</div>
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-black uppercase mb-1" style={{ fontFamily: "Oswald, sans-serif", color: "#00BFFF" }}>Матчи и Новости</h3>
+              <p className="text-gray-300 text-sm">Расписание игр · Свежие новости · Сезон 2024–25</p>
+            </div>
+            <div className="md:ml-auto text-sm font-semibold" style={{ color: "#00BFFF" }}>Смотреть →</div>
+          </div>
+
           {/* Squad Banner */}
           <div
             onClick={() => navigate("/squad")}
